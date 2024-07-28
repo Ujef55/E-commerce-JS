@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +29,7 @@
 }
 
 html {
+  font-family: "Urbanist", sans-serif;
   font-size: 62.5%;
   color: var(--textColor);
 }
@@ -220,7 +223,7 @@ textarea:focus-visible {
     font-size: 1.5rem;
   }
 
-  & .sing_in_up {
+  & .sign_in_up {
     display: flex;
     gap: 3.2rem;
   }
@@ -293,27 +296,6 @@ main {
     #b3d2ff,
     #ebf3fe
   );
-}
-
-.custom-shape-divider-bottom-1696038172 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1696038172 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 12rem;
-}
-
-.custom-shape-divider-bottom-1696038172 .shape-fill {
-  fill: #ffffff;
 }
 
 main .section-hero {
@@ -539,29 +521,6 @@ main .section-hero {
   align-items: center;
   position: relative;
   transform-origin: center;
-}
-
-.choose-center-div figure::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 45rem;
-  height: 45rem;
-  border-radius: 50%;
-  background-color: var(--main-color);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  z-index: -1;
-  animation: circle 5s linear infinite;
-  -webkit-animation: circle 5s linear infinite alternate;
 }
 
 @keyframes circle {

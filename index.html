@@ -3,9 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>iStore</title>
   </head>
   <body>
-    <h1>Hello</h1>
+    <!-- Header section -->
+    <header class="section-navbar">
+      <section class="top_txt">
+        <div class="head container">
+          <div class="head_txt">
+            <p>Free shipping, 30-day return or refund guarantee</p>
+          </div>
+          <div class="sign_in_up">
+            <a href="#">SIGN IN</a>
+            <a href="#">LOG IN</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- nav-bar container -->
+      <div class="container">
+        <div class="nav-brand">
+          <a href="index.html">
+            <h3>iStore</h3>
+          </a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="products.html" class="nav-link">Products</a>
+            </li>
+            <li class="nav-item">
+              <a href="nav-link.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="cart.html"
+                class="nav-link add-to-cart-button"
+                id="cartValue"
+              >
+                <i class="fa-solid fa-cart-shopping"> 0 </i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header section -->
+
+    <!-- Hero section -->
+    <main>
+      <section class="section-hero">
+        <div class="container grid grid-two--cols">
+          <div class="section-hero--content">
+            <p class="hero-subheading">Explore the Latest in Tech Industries</p>
+            <h1 class="hero-heading">
+              This website is only for javascript practice purpose
+            </h1>
+            <p class="hero-para">
+              Welcome to iStore, your ultimate destination for cutting-edge
+              gadgets! Explore the latest in tech innovation and style with us.
+              Shop now and discover a world of possibilities!
+            </p>
+            <div class="hero-btn">
+              <a href="products.html" class="btn">Explore more</a>
+            </div>
+          </div>
+          <div
+            class="section-hero-image"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <figure>
+              <img
+                src="/public/images/heroImage.png"
+                alt="coding languages using html css js"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End Hero section -->
+
+    <!-- Start extra products-section -->
+    <section class="section-extra-product">
+      <div class="container grid grid-three--cols">
+        <div class="div-extra grid grid-two--cols">
+          <div class="extra-text">
+            <p>new year sale</p>
+            <h3>get and extra 50% off</h3>
+            <a href="#">Show now</a>
+          </div>
+          <div class="extra-img extra-laptop">
+            <img src="./images/laptop.png" alt="" />
+          </div>
+        </div>
+
+        <div class="div-extra grid grid-two--cols">
+          <div class="extra-text">
+            <p>new year sale</p>
+            <h3>40% discount on speakers</h3>
+            <a href="#">Show now</a>
+          </div>
+          <div class="extra-img">
+            <img src="./images/headphoneEcom.png" alt="" />
+          </div>
+        </div>
+
+        <div class="div-extra grid grid-two--cols">
+          <div class="extra-text">
+            <p>new year sale</p>
+            <h3>get and extra 50% off</h3>
+            <a href="#">Show now</a>
+          </div>
+          <div class="extra-img">
+            <img src="./images/mobiles.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End extra poruducts-section -->
   </body>
 </html>
