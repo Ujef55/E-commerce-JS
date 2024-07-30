@@ -1,3 +1,5 @@
+import { homeIncrementDecrement } from "./homeIncrementDecrement";
+
 const productContainer = document.querySelector('#productContainer');
 const productTemplate = document.querySelector('#productTemplate');
 
@@ -19,6 +21,12 @@ export function homeProductCard(products) {
         cloneProduct.querySelector('.productStock').textContent = stock;
         cloneProduct.querySelector('.productImage').setAttribute('src', image);
         cloneProduct.querySelector('.productActualPrice').textContent = `₹${Math.round(price * 3)}`;
+
+        cloneProduct.querySelector('#cardValue').setAttribute('id', `card${id}`);
+
+        cloneProduct.querySelector('.stockElement').addEventListener('click', (e) => {
+            homeIncrementDecrement(e, id, stock);
+        })
 
         productContainer.appendChild(cloneProduct);
     });
