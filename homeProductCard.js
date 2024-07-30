@@ -1,4 +1,5 @@
 import { homeIncrementDecrement } from "./homeIncrementDecrement";
+import { addToCart } from "./addtoCart";
 
 const productContainer = document.querySelector('#productContainer');
 const productTemplate = document.querySelector('#productTemplate');
@@ -27,6 +28,10 @@ export function homeProductCard(products) {
         cloneProduct.querySelector('.stockElement').addEventListener('click', (e) => {
             homeIncrementDecrement(e, id, stock);
         })
+
+        cloneProduct.querySelector('.add-to-cart-button').addEventListener('click', (e) => {
+            addToCart(e, id, stock);
+        });
 
         productContainer.appendChild(cloneProduct);
     });
