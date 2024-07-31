@@ -1,4 +1,5 @@
 import { getCartFromLocalStorage } from "./getCartFromLocalStorage";
+import { updateCartValue } from "./updateCartValue";
 
 export function addToCart(e, id, stock) {
     const currentCard = document.querySelector(`#card${id}`);
@@ -19,4 +20,7 @@ export function addToCart(e, id, stock) {
     localStorage.setItem('localStorageProduct', JSON.stringify(arrLocalStorageProductCart));
 
     console.log(arrLocalStorageProductCart);
+
+    // update cart value with every
+    updateCartValue(arrLocalStorageProductCart);
 }
