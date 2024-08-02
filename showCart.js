@@ -1,5 +1,6 @@
 import products from './api/products.json';
 import { getCartFromLocalStorage } from './getCartFromLocalStorage';
+import { removeItemFromCart } from './removeItemFromCart';
 
 const cartContainer = document.querySelector('#productCartContainer');
 const templateContainer = document.querySelector('#productCartTemplate');
@@ -36,8 +37,12 @@ filteredProducts.forEach((currentProduct) => {
     cloneProduct.querySelector('.productQuantity').innerText = quantity;
     cloneProduct.querySelector('.category').innerText = category;
 
+    cloneProduct.querySelector('.remove-to-cart-button').addEventListener('click', () => {
+        removeItemFromCart(id);
+    })
+
+
     cartContainer.appendChild(cloneProduct);
 })
-
 
 
