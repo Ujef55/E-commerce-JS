@@ -1,6 +1,5 @@
-export function updateCartValue(cartArr) {
-    let cartValue = document.querySelector('#cartValue');
-    cartValue = cartValue.querySelector('.fa-cart-shopping');
-    cartValue.innerText = ` ${cartArr.length}`
-    console.log(cartValue);
+let cartValue = document.querySelector('#cartValue');
+
+export function updateCartValue(cartArr, quantity, price) {
+    return (cartValue.innerHTML = `<i class="fa-solid fa-cart-shopping"> ${cartArr.length} </i>`);
 }

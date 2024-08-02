@@ -1,3 +1,5 @@
+import { updateCartValue } from "./updateCartValue";
+
 export function getCartFromLocalStorage() {
     let cartProducts = localStorage.getItem('localStorageProduct');
 
@@ -5,6 +7,7 @@ export function getCartFromLocalStorage() {
         return [];
     }
     cartProducts = JSON.parse(cartProducts);
+    updateCartValue(cartProducts);
 
     return cartProducts;
 }
