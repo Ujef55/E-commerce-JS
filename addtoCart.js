@@ -1,4 +1,5 @@
 import { getCartFromLocalStorage } from "./getCartFromLocalStorage";
+import { showToast } from "./showToast";
 import { updateCartValue } from "./updateCartValue";
 
 getCartFromLocalStorage()
@@ -48,4 +49,6 @@ export function addToCart(e, id, stock) {
 
     // update cart value with every
     updateCartValue(arrLocalStorageProductCart, quantity, price);
+
+    showToast('add', id);
 }
