@@ -1,6 +1,8 @@
 import products from './api/products.json';
 import { getCartFromLocalStorage } from './getCartFromLocalStorage';
 import { removeItemFromCart } from './removeItemFromCart';
+import { cartIncrementDecrement } from './cartIncrementDecrement';
+import { updateTotalPrice } from './updateTotalPrice';
 
 const cartContainer = document.querySelector('#productCartContainer');
 const templateContainer = document.querySelector('#productCartTemplate');
@@ -37,12 +39,18 @@ filteredProducts.forEach((currentProduct) => {
     cloneProduct.querySelector('.productQuantity').innerText = quantity;
     cloneProduct.querySelector('.category').innerText = category;
 
+
+    cloneProduct.querySelector('.stockElement').addEventListener('click', (e) => {
+        cartIncrementDecrement(e, id, stock, price);
+        updateTotalPrice();
+    })
+
     cloneProduct.querySelector('.remove-to-cart-button').addEventListener('click', () => {
         removeItemFromCart(id);
     })
 
-
     cartContainer.appendChild(cloneProduct);
 })
 
+updateTotalPrice();
 
